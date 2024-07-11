@@ -1,111 +1,118 @@
 .header {
-    background-color: $white;
-    color: $black;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    width: 100%;
+    padding: 22px 0;
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 20px;
     }
 
     &__logo {
-        font-size: 24px;
-        font-weight: 500;
+        z-index: 5;
+    }
+    &__link {
+        color: $textColor;
+        text-decoration: none;
 
-        @include for-mobile {
-            font-size: 18px;
-        }
-
-        span {
-            font-weight: bold;
+        @media (max-width: 768px) {
+            color: $footerTextColor;
         }
     }
 
-    &__nav {
-        display: flex;
-        font-size: 15px;
-        font-weight: 400;
-        gap: 32px;
-
-        .nav__button {
-            background-color: $black;
-            color: $white;
-            padding: 12px 20px;
-            border-radius: 14px;
-            cursor: pointer;
-        }
-
-        .nav__list {
+    &__menu {
+        @media (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $bgFooter;
             display: flex;
-            list-style: none;
+            justify-content: center;
             align-items: center;
-            white-space: nowrap;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
 
-            .nav__item {
-                margin-left: 20px;
-
-                .nav__link {
-                    color: $black;
-                    text-decoration: none;
-                    font-size: 18px;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
+            &.active {
+                transform: translateX(0);
             }
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__item {
+        margin-right: 34px;
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__btn-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__login {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-right: 20px;
+        color: $linkColor;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__hidden {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-right: 20px;
+        color: $linkColor;
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
         }
     }
 
     &__burger {
         display: none;
-        flex-direction: column;
+        background-color: $bgFooter;
+        border: none;
         cursor: pointer;
+        padding: 0;
+        z-index: 5;
 
-        .burger__line {
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        span {
+            display: block;
             width: 25px;
             height: 3px;
-            background-color: $black;
-            margin: 4px 0;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        &__nav {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            background-color: $white;
-            position: fixed;
-            top: 50px;
-            right: 0;
-            left: 0;
-
-            width: 100%;
-            padding: 20px 0;
-            z-index: 5;
-            .nav__list {
-                flex-direction: column;
-
-                .nav__item {
-                    margin: 10px 0;
-                }
-            }
-        }
-
-        &__burger {
-            display: flex;
-        }
-
-        &__nav--active {
-            display: flex;
+            background-color: #fff;
+            margin-bottom: 5px;
         }
     }
 }
