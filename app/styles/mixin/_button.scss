@@ -1,0 +1,14 @@
+@mixin button {
+    cursor: pointer;
+    background-color: $active;
+    padding: 21px 100px;
+    color: $titleColor;
+    font-size: 21px;
+    border-radius: 12px;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    @media (max-width: 337px) {
+        padding: 21px 50px;
+    }
+}

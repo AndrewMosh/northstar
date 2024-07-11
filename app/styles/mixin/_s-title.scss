@@ -1,0 +1,13 @@
+@mixin s-title {
+    color: $titleColor;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    @include for-mobile {
+        font-size: 22px;
+        line-height: 38px;
+    }
+}

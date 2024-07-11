@@ -1,27 +1,28 @@
 .header {
-    padding: 22px 0;
+    padding: 42px 0;
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
     }
 
     &__logo {
         z-index: 5;
     }
+
     &__link {
         color: $textColor;
         text-decoration: none;
+        white-space: nowrap;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             color: $footerTextColor;
         }
     }
 
     &__menu {
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             position: fixed;
             top: 0;
             left: 0;
@@ -34,6 +35,7 @@
             flex-direction: column;
             transform: translateX(-100%);
             transition: transform 0.3s ease-in-out;
+            z-index: 3;
 
             &.active {
                 transform: translateX(0);
@@ -47,15 +49,16 @@
         margin: 0;
         padding: 0;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             flex-direction: column;
             text-align: center;
         }
     }
+
     &__item {
         margin-right: 34px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             margin-right: 0;
             margin-bottom: 20px;
         }
@@ -76,8 +79,9 @@
         cursor: pointer;
         margin-right: 20px;
         color: $linkColor;
+        white-space: nowrap;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             display: none;
         }
     }
@@ -90,7 +94,7 @@
         color: $linkColor;
         display: none;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             display: block;
         }
     }
@@ -103,7 +107,7 @@
         padding: 0;
         z-index: 5;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1025px) {
             display: block;
         }
 

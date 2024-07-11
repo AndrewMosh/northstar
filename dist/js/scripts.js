@@ -64,6 +64,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./app/scripts/btn-anim.ts":
+/*!*********************************!*\
+  !*** ./app/scripts/btn-anim.ts ***!
+  \*********************************/
+/***/ (() => {
+
+eval("var imageElements = Array.from(document.querySelectorAll('.btn-top'));\nwindow.addEventListener('scroll', handleScroll);\nfunction handleScroll() {\n    var scrollPosition = window.pageYOffset;\n    var translateY = \"-\".concat(scrollPosition * 0.15, \"px\");\n    imageElements.forEach(function (element) {\n        element.style.transform = \"translateY(\".concat(translateY, \")\");\n    });\n}\n\n\n//# sourceURL=webpack://northstar/./app/scripts/btn-anim.ts?");
+
+/***/ }),
+
 /***/ "./app/scripts/gsap.ts":
 /*!*****************************!*\
   !*** ./app/scripts/gsap.ts ***!
@@ -92,7 +102,7 @@ eval("(function () {\n    var links = document.querySelectorAll('a[href*=\"#\"]'
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.ts */ \"./app/scripts/menu.ts\");\n/* harmony import */ var _menu_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_ts__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _href_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./href.ts */ \"./app/scripts/href.ts\");\n/* harmony import */ var _href_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_href_ts__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _gsap_ts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gsap.ts */ \"./app/scripts/gsap.ts\");\n\n\n\n\n\n//# sourceURL=webpack://northstar/./app/scripts/main.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.ts */ \"./app/scripts/menu.ts\");\n/* harmony import */ var _menu_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu_ts__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _href_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./href.ts */ \"./app/scripts/href.ts\");\n/* harmony import */ var _href_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_href_ts__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _gsap_ts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gsap.ts */ \"./app/scripts/gsap.ts\");\n/* harmony import */ var _btn_anim_ts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./btn-anim.ts */ \"./app/scripts/btn-anim.ts\");\n/* harmony import */ var _btn_anim_ts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_btn_anim_ts__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack://northstar/./app/scripts/main.ts?");
 
 /***/ }),
 

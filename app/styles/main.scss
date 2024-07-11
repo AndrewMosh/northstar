@@ -1,5 +1,7 @@
 @import "./normilize/reset";
 @import "./mixin/fonts";
+@import "./mixin/button";
+@import "./mixin/s-title";
 
 @import "./fonts";
 @import "./setting/variables";
@@ -8,12 +10,12 @@
 @import "./elements/button";
 // @import "./elements/content";
 // @import "./elements/input";
-// @import "./elements/s-title";
+
 // @import "./elements/sl-arrows";
 @import "./elements/header";
 // @import "./elements/footer";
 
-// @import "@Sections/main/main";
+@import "@Sections/main/main";
 // @import "@Sections/about/about";
 // @import "@Sections/reeding/reeding";
 // @import "@Sections/proccess/proccess";

@@ -1,0 +1,151 @@
+.main {
+    background-color: $bgColor;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 191px;
+        align-items: center;
+
+        @media (max-width: 809px) {
+            gap: 80px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-top: 40px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        @media (max-width: 1306px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__inner,
+    &__images {
+        flex: 0 0 50%;
+    }
+
+    &__title {
+        color: $titleColor;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 72px;
+        max-width: 454px;
+        padding-bottom: 8px;
+
+        @media (max-width: 502px) {
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33px;
+        max-width: 536px;
+        padding-bottom: 28px;
+        padding-right: 28px;
+    }
+
+    &__button {
+        @include button;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-top: 32px;
+
+        a {
+            color: $linkColorSecondary;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration-line: underline;
+        }
+    }
+
+    &__images {
+        position: relative;
+        z-index: 0;
+        gap: 40px;
+
+        @media (max-width: 1306px) {
+            order: -1;
+        }
+    }
+
+    &__figure-1,
+    &__figure-2,
+    &__figure-3 {
+        position: absolute;
+    }
+
+    &__figure-1 {
+        left: 50px;
+        top: -26%;
+        z-index: -1;
+
+        @media (max-width: 1306px) {
+            width: 30%;
+            left: 0;
+        }
+    }
+
+    &__figure-2 {
+        right: -50px;
+        top: -15%;
+
+        @media (max-width: 1306px) {
+            width: 20%;
+            right: 0;
+        }
+    }
+
+    &__figure-3 {
+        left: -60px;
+        bottom: -30px;
+
+        @media (max-width: 1306px) {
+            width: 20%;
+            left: 0;
+            bottom: -20px;
+        }
+    }
+
+    &__supporters {
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: $titleColorSecondary;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-bottom: 33px;
+    }
+
+    &__logos {
+        display: flex;
+        gap: 64px;
+        scroll-behavior: smooth;
+
+        @media (max-width: 809px) {
+            overflow: auto;
+            gap: 34px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}

@@ -61,3 +61,15 @@ a {
         padding: 0 10px;
     }
 }
+
+.btn-top {
+    transition: transform 0.3s ease-out;
+}
+
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff; /* Цвет дорожки */
+}
